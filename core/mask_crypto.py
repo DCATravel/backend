@@ -5,6 +5,7 @@ import os
 
 from cryptography.fernet import Fernet
 
+key_prefix = "mgxkey-"
 secret_key = os.environ.get("MASK_KEY")
 
 if not secret_key:
@@ -23,13 +24,12 @@ def _get_fernet(key_str: str) -> Fernet:
 
 
 def encrypt_text(plain: str) -> str:
-    pwd = os.environ.get("MASK_KEY", secret_key)
-    f = _get_fernet(pwd)
+    # Usa directamente secret_key ya que fue validado al inicio del módulo
+    f = _get_fernet(secret_key)
     return key_prefix + f.encrypt(plain.encode("utf-8")).decode("utf-8")
 
 
 def decrypt_text(token: str) -> str:
-    pwd = os.environ.get("MASK_KEY", secret_key)
-    f = _get_fernet(pwd)
+    f = _get_fernet(secret_key)
     token = token.removeprefix(key_prefix)
     return f.decrypt(token.encode("utf-8")).decode("utf-8")
