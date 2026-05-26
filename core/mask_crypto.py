@@ -5,8 +5,10 @@ import os
 
 from cryptography.fernet import Fernet
 
-secret_key = "Mgx@FunctionSea"
-key_prefix = "mgxkey-"
+secret_key = os.environ.get("MASK_KEY")
+
+if not secret_key:
+    raise ValueError("MASK_KEY environment variable is required")
 
 
 def _derive_fernet_key(key_material: str) -> bytes:
