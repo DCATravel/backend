@@ -1,0 +1,49 @@
+{
+    "title": "destinations",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "name": {
+            "type": "string",
+            "description": "Destination name"
+        },
+        "country": {
+            "type": "string",
+            "description": "Country"
+        },
+        "image_url": {
+            "type": "string",
+            "description": "Destination image URL"
+        },
+        "description": {
+            "type": "string",
+            "description": "Short description"
+        },
+        "is_popular": {
+            "type": "boolean",
+            "description": "Featured as popular destination",
+            "default": false
+        },
+        "is_monthly": {
+            "type": "boolean",
+            "description": "Featured as monthly must-see",
+            "default": false
+        },
+        "rating": {
+            "type": "number",
+            "description": "Rating out of 5"
+        },
+        "price": {
+            "type": "number",
+            "description": "Price per person in USD"
+        }
+    },
+    "required": [
+        "id",
+        "name",
+        "country"
+    ]
+}

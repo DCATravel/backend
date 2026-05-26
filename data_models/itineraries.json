@@ -1,0 +1,92 @@
+{
+    "title": "itineraries",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "destination_id": {
+            "type": "integer",
+            "description": "Related destination ID"
+        },
+        "title": {
+            "type": "string",
+            "description": "Itinerary title"
+        },
+        "description": {
+            "type": "string",
+            "description": "Full description of the trip"
+        },
+        "image_url": {
+            "type": "string",
+            "description": "Cover image URL"
+        },
+        "duration_days": {
+            "type": "integer",
+            "description": "Number of days"
+        },
+        "duration_nights": {
+            "type": "integer",
+            "description": "Number of nights"
+        },
+        "cities_count": {
+            "type": "integer",
+            "description": "Number of cities visited"
+        },
+        "season": {
+            "type": "string",
+            "description": "Best season"
+        },
+        "price_per_person": {
+            "type": "number",
+            "description": "Price per person in USD"
+        },
+        "flight_departure_city": {
+            "type": "string",
+            "description": "Departure city code"
+        },
+        "flight_departure_date": {
+            "type": "string",
+            "description": "Departure date"
+        },
+        "flight_arrival_city": {
+            "type": "string",
+            "description": "Arrival city code"
+        },
+        "flight_arrival_date": {
+            "type": "string",
+            "description": "Arrival date"
+        },
+        "flight_return_date": {
+            "type": "string",
+            "description": "Return flight date"
+        },
+        "flight_stopovers": {
+            "type": "string",
+            "description": "Stopover info"
+        },
+        "activities": {
+            "type": "string",
+            "description": "JSON array of activities"
+        },
+        "included": {
+            "type": "string",
+            "description": "JSON array of included items"
+        },
+        "not_included": {
+            "type": "string",
+            "description": "JSON array of not included items"
+        },
+        "is_active": {
+            "type": "boolean",
+            "description": "Whether itinerary is active",
+            "default": true
+        }
+    },
+    "required": [
+        "id",
+        "title",
+        "duration_days"
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "title": "itinerary_days",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        },
+        "itinerary_id": {
+            "type": "integer",
+            "description": "Foreign key to itineraries"
+        },
+        "day_number": {
+            "type": "integer",
+            "description": "Day number in the itinerary"
+        },
+        "title": {
+            "type": "string",
+            "description": "Day title"
+        },
+        "description": {
+            "type": "string",
+            "description": "Day activities description"
+        },
+        "location": {
+            "type": "string",
+            "description": "Location for this day"
+        },
+        "notes": {
+            "type": "string",
+            "description": "Additional notes"
+        }
+    },
+    "required": [
+        "id",
+        "user_id",
+        "itinerary_id",
+        "day_number",
+        "title"
+    ]
+}

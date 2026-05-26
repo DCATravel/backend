@@ -1,0 +1,39 @@
+{
+    "title": "materials",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "title": {
+            "type": "string",
+            "description": "Material title"
+        },
+        "type": {
+            "type": "string",
+            "description": "Type: banner, flyer, cover, post"
+        },
+        "destination_name": {
+            "type": "string",
+            "description": "Related destination name"
+        },
+        "file_url": {
+            "type": "string",
+            "description": "Download URL for the material"
+        },
+        "thumbnail_url": {
+            "type": "string",
+            "description": "Thumbnail preview URL"
+        },
+        "dimensions": {
+            "type": "string",
+            "description": "Dimensions like 1080x1080"
+        }
+    },
+    "required": [
+        "id",
+        "title",
+        "type"
+    ]
+}

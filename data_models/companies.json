@@ -1,0 +1,40 @@
+{
+    "title": "companies",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID from auth"
+        },
+        "company_name": {
+            "type": "string",
+            "description": "Company name"
+        },
+        "address": {
+            "type": "string",
+            "description": "Company address"
+        },
+        "phone": {
+            "type": "string",
+            "description": "Company phone number"
+        },
+        "logo_url": {
+            "type": "string",
+            "description": "URL to company logo"
+        },
+        "is_admin": {
+            "type": "boolean",
+            "description": "Whether user has admin role",
+            "default": false
+        }
+    },
+    "required": [
+        "id",
+        "user_id",
+        "company_name"
+    ]
+}
